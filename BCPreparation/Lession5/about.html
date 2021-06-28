@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>About page</title>
+        <style>
+            .ul_1>li{
+                display: inline-block;
+                margin: 0px 10px 0px 10px;
+            }
+            .ul_1>li::before{
+                content: "|";
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Welcome to About Page</h1>
+        <!-- ul ~ unorder list
+            ol ~ order list 
+            li ~ list item
+            type="square/disc/circle"
+        -->
+        <ul class="ul_1" type="square">
+            <li>Đồ ăn</li>
+            <li>Thức uống</li>
+            <li>Quà tặng</li>
+        </ul>
+        <ol type="1">
+            <li>Đồ ăn</li>
+            <li>Thức uống
+                <ul type="square">
+                    <li>Huda Trâu</li>
+                    <li>Pepsi</li>
+                </ul>
+            </li>
+            <li>Quà tặng</li>
+        </ol>
+    </body>
+</html>
