@@ -6,6 +6,11 @@
         <form action="" method="GET">
             <table>
                 <tr>
+                    <td colspan="2">
+                        <h1 id="employee_info">Thông Tin Nhân Viên</h1>
+                    </td>
+                </tr>
+                <tr>
                     <td>Họ và Tên</td>
                     <td>
                         <input type="text">
@@ -44,7 +49,9 @@
                 <tr>
                     <td>Mật khẩu</td>
                     <td>
-                        <input type="password">
+                        <input type="password" oninput="document.getElementsByClassName('show_pw')[0].value = this.value">
+                        <input type="hidden" class="show_pw">
+                        <button onclick="document.getElementsByTagName('input')[4].type = 'text'">Show</button>
                     </td>
                 </tr>
                 <tr>
@@ -63,7 +70,9 @@
                 <tr>
                     <td>Phạm vi</td>
                     <td>
-                        <input type="range" min="0" max="10">
+                        <input type="range" min="14" max="25"
+                        oninput="document.getElementById('employee_info').style.fontSize = this.value;"
+                        >
                     </td>
                 </tr>
                 <tr>
@@ -90,7 +99,7 @@
                 <tr>
                     <td>Màu yêu thích</td>
                     <td>
-                        <input type="color">
+                        <input type="color" oninput="document.getElementsByTagName('body')[0].style.backgroundColor = this.value;">
                     </td>
                 </tr>
                 <tr>
@@ -99,7 +108,7 @@
                         <input type="date" min="2021-01-01" max="2021-12-31">
                         <input type="time">
                         <br>
-                        <input type="datetime-local">
+                        <input type="datetime-local" onchange="window.alert(this.value)">
                     </td>
                 </tr>
                 <tr>
@@ -111,7 +120,7 @@
                 <tr>
                     <td>Tuần</td>
                     <td>
-                        <input type="week">
+                        <input type="week" oninput="window.alert(this.value)">
                     </td>
                 </tr>
                 <tr>
