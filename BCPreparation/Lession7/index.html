@@ -1,0 +1,33 @@
+<html>
+    <head></head>
+    <body>
+        <button
+            onmouseover='this.innerHTML = new Date(); 
+                        this.style.color = "red";
+                        this.style.backgroundColor="orange";'
+            onmouseout="this.innerHTML = 'Show Datetime'"
+        >Show Datetime</button>
+
+        <img src="resource/Tony.jpg"
+            onmouseover="this.style.width='300px'; this.style.cursor='zoom-in'"
+            onmouseout="this.style.width='225px'"
+        >
+
+        <script>
+            var greeting = "1";
+            console.log(greeting);
+            if(true){
+                var greeting = "2";
+                console.log(greeting);
+            }
+            console.log(greeting);
+
+            let n1 = 1;
+            let n2 = 2;
+            document.write("<br>")
+            document.write(n1 + " + " + n2 + " = " + (n1 + n2))
+            document.write("<br>")
+            document.write(`${n1} + ${n2} = ${n1 + n2}`)
+        </script>
+    </body>
+</html>
