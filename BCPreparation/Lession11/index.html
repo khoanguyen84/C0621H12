@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array methods</title>
+</head>
+
+<body>
+    <script>
+        let array = [12, 13, 1, 2, 3, 2, 5, 6, 7, 8, 9, 10];
+        // array.sort(function(a,b){
+        //     return a- b;
+        // })
+        let every = array.every(function(value,index){
+            return value >=1;
+        });
+
+        let some = array.some(function(value,index){
+            return value >12;
+        })
+
+        let find = array.find(function(value,index){
+            return value > 10;
+        })
+
+        let findIndex = array.findIndex(function(value,index){
+            return value>12;
+        })
+        document.write("--------FOR OF -----------<br>");
+        for (let item of array) {
+            document.write(`${array.indexOf(item)} `);
+        }
+        document.write("<br>--------FOR IN -----------<br>");
+        for (let index in array) {
+            document.write(`${array[index]} `);
+        }
+        document.write("<br>--------FOR EACH -----------<br>");
+        array.forEach(function (value, index) {
+            document.write(`${index} `);
+        })
+
+        let a1 = array.map(function (value, index) {
+            return value * 2;
+        })
+
+        let f1 = array.filter(function (value, index) {
+            return value >= 7 && value <= 10;
+        })
+        let sum = array.reduce(function (total, value, index) {
+            return total += array[index];
+        }, 100);
+
+        for(var i=0, total=0; i< array.length; i++){
+            total += array[i];
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditional Statement</title>
+</head>
+
+<body>
+    <script>
+        let aveScore = +prompt('Nhập điểm trung bình:');
+        // switch (
+        // (aveScore < 0 || aveScore > 10) ? "invalid" :
+        //     (aveScore >= 9 ? "XS" :
+        //         (aveScore >= 8) ? "G" :
+        //             (aveScore >= 7) ? "K" :
+        //                 (aveScore >= 5) ? "TB" : "Y")
+        // ) {
+        //     case "XS":
+        //         alert('Xuất sắc');
+        //         break;
+        //     case "G":
+        //         alert('Giỏi');
+        //         break;
+        //     case "K":
+        //         alert('Khá');
+        //         break;
+        //     case "TB":
+        //         alert('Trung bình');
+        //         break;
+        //     case "Y":
+        //         alert('Yếu');
+        //         break;
+        //     default:
+        //         alert('Điểm trung bình không hợp lệ');
+        //         break;
+        // }
+        if (aveScore > 10 || aveScore < 0)
+            alert('Điểm trung bình không hợp lệ');
+        else {
+            switch (Math.floor(aveScore)) {
+                case 10:
+                case 9:
+                    alert('Xuất sắc');
+                    break;
+                case 8:
+                    alert('Giởi');
+                    break;
+                case 7:
+                    alert('Khá');
+                    break;
+                case 6:
+                case 5:
+                    alert('Trung bình');
+                    break;
+                default:
+                    alert('Yếu');
+                    break;
+            }
+        }
+
+    </script>
+</body>
+
+</html>
