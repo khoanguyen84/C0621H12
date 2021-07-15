@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOP1</title>
+</head>
+<body>
+    <script>
+        let khoa = {};
+        khoa.firstName = "Khoa";
+        khoa.gender = "Male";
+        khoa.email = "khoa.nguyen@codegym.vn";
+        khoa.greeting = function(){
+            return `My name is ${this.firstName}, I'm ${this.gender}, my email is ${this.email}`
+        }
+
+        let chinh = {
+            firstName : "Chính",
+            gender: "Male",
+            email: "chinh.nguyen@codegym.vn",
+            greeting:function(){
+                return `My name is ${this.firstName}, I'm ${this.gender}, my email is ${this.email}`
+            }
+        }
+
+
+        function Student(fn, g, e){
+            this.firstName = fn;
+            this.gender = g;
+            this.email = e;
+
+            this.greeting = function(){
+                return `My name is ${this.firstName}, I'm ${this.gender}, my email is ${this.email}`
+            }
+        }
+
+        let huy = new Student("Huy","Male", "huy.tran@codegym.vn");
+        let tri = new Student("Tri","Male", "tri.huynh@codegym.vn");
+
+
+        function Staff(salary, rate){
+            this.firstName;
+            this.phonenumber;
+            this.salary = salary;
+            this.rate = rate;
+
+            this.setName = function(name){
+                this.firstName = name;
+            }
+            this.getName = function(){
+                return this.firstName.toUpperCase();
+            }
+
+            this.setPN = function(pn){
+                this.phonenumber = pn;
+            }
+
+            this.getPN = function(){
+                return `${this.phonenumber.substring(this.phonenumber.lenght-3)}XXX`;
+            }
+
+            this.getTotalSalary = function(){
+                return this.salary * this.rate;
+            }
+        }
+
+        let hieu = new Staff(1000000,3.0);
+        // hieu.setName("Hieu");
+    </script>
+</body>
+</html>

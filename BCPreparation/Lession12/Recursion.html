@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursion</title>
+</head>
+<body>
+    <script>
+        function recursion(n){
+            if(n==1)
+                return 1;
+            return recursion(n-1) * n;
+        }
+        document.write(recursion(100));
+        document.write("<br>");
+        function nonRecursion(n){
+            let result = 1;
+            for(let i=1;i<=n;i++){
+                result *= i;
+            }
+            return result;
+        }
+        document.write(nonRecursion(100));
+    </script>
+</body>
+</html>
