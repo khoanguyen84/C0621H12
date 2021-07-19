@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECMA Script 6</title>
+</head>
+<body>
+    <script>
+        // function Staff(salary, rate){
+        //     this.firstName;
+        //     this.phonenumber;
+        //     this.salary = salary;
+        //     this.rate = rate;
+
+        //     this.setName = function(name){
+        //         this.firstName = name;
+        //     }
+        //     this.getName = function(){
+        //         return this.firstName.toUpperCase();
+        //     }
+        // }
+        class Staff{
+            constructor(salary, rate){
+                this.salary = salary,
+                this.rate = rate
+            }
+            setName(name){
+                this.name = name;
+            }
+            getName(){
+                return this.name;
+            }
+            getInfo(){
+                return `Salary: ${this.salary}, Rate: ${this.rate}, Name: ${this.name}`;
+            }
+        }
+
+        class FTStaft extends Staff{
+            constructor(salary, rate, allowance){
+                super(salary, rate),
+                this.allowance = allowance
+            }
+            getInfo(){
+                return `${super.getInfo()}, Allowance: ${this.allowance}`;
+            }
+        }
+
+        let hieu = new Staff(10000000, 2.0);
+        hieu.setName('Hiếu');
+        document.write(hieu.getInfo());
+        document.write("<br>");
+        let nguyen = new FTStaft(5000000, 2.0, 500000);
+        nguyen.setName("Nguyen");
+        document.write(nguyen.getInfo());
+    </script>
+</body>
+</html>

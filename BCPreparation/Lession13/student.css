@@ -1,0 +1,59 @@
+*{
+    margin:0px;
+    padding:0px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.container{
+    max-width: 900px;
+    margin: 0px auto;
+}
+
+.row{
+    display: inline;
+}
+
+.card{
+    width: calc((884)/4);
+    margin-right: 4px;
+    margin-bottom: 4px;
+    float: left;
+}
+
+.card-header{
+    background-color: green;
+    color: white;
+    padding: 3px 0px;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.card-body{
+    width: 100%;;
+}
+
+.card-body img{
+    width: 100%;
+}
+
+.card-foot{
+    background-color: gray;
+    padding:5px 0px;
+    border-radius: 0px 0px 5px 5px;
+}
+
+.btn{
+    border: none;
+    outline: none;
+    padding:5px;
+    border-radius: 4px;
+}
+
+.btn-success{
+    background-color: blue;
+    color: white;
+}
+
+.btn-success:hover{
+    cursor: pointer;
+    background-color: darkblue;
+}
