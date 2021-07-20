@@ -1,0 +1,93 @@
+*, *::before, *::after{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.h1-g1, .h1-g2{
+    color:red;
+    background-color: yellow;
+    /* border-width: 10px;
+    border-style: solid;
+    border-color: green; */
+    border:10px solid green;
+
+    border-radius: 5px;
+    padding:10px;
+    /* margin:10px; */
+    /* margin-top:10px;
+    margin-right: 20px;
+    margin-bottom: 5px;
+    margin-left: 15px; */
+    /* margin:10px 20px 5px 15px; */
+    /* margin:10px 20px 10px 20px; */
+    margin: 10px 20px;
+}
+
+#h1-id{
+    background-color: green;
+    color: white;
+    width: 300px;
+    border-radius: 10px 0px;
+}
+
+#h1-id:hover{
+    cursor: pointer;
+    background-color: darkgreen;
+    box-shadow: 5px -5px lightgreen;
+    transition: .2s;
+}
+
+/* a[target]{
+    text-decoration: none;
+    color:green;
+} */
+
+input[type='text']{
+    border:none;
+    outline: none;
+    border-bottom-width: 2px;
+    border-bottom-style: dotted;
+    border-bottom-color: black;
+}
+/* div a:not(:last-child)::after{
+    content: " |";
+} */
+
+div a:not(:first-child)::before{
+    content: "| ";
+}
+/* ul li:first-child{
+    color: red;
+}
+
+ul li:last-child{
+    color:green;
+} */
+ul li:nth-child(2n+1){
+    color:red
+}
+
+input[type="password"]:focus{
+    transform: scale(2);
+}
+
+/* p::first-letter{
+    font-size: 80px;
+    color: green;
+} */
+
+/* p::first-line{
+    background-color: green;
+    color: white;
+} */
+
+p::selection{
+    background-color: red;
+    color: yellow;
+}
+
+
+.area{
+    width: 100px;
+    height: 100px;
+    border:1px solid;
+    background-image: linear-gradient(to right bottom, red, yellow, green);
+}
